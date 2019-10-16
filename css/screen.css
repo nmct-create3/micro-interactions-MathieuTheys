@@ -807,6 +807,7 @@ more padding on the right to avoid overlap
     padding: 0  var(--global-whitespace-sm);
     background-color: var(--label--floating-backgroundColor, var(--global-input-backgroundColor));
     transition: transform var(--global-transitionDuration-alpha) var(--global-transitionEasing-out);
+    z-index: 1;
 }
 
 .is-floating,
@@ -1116,11 +1117,17 @@ more padding on the right to avoid overlap
     top: 0;
     right: 0;
     bottom: 0;
+    display: block;
 }
 
 .c-password-toggle__label {
     display: flex;
     align-items: center;
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute; */
+    /* padding: 0 16px; */
     padding: 14px 16px;
 }
 
