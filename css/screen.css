@@ -899,7 +899,7 @@ more padding on the right to avoid overlap
     --custom-option-focus-boxShadowColor: var(--global-input-focus-boxShadowColor);
     --custom-option-focus-boxShadow: var(--global-input-focus-boxShadowSpread) var(--custom-option-focus-boxShadowColor);
     --custom-option__symbol-fill: var(--global-color-alpha);
-    --custom-option-transition: all var(--global-transitionDuration-alpha) var(--global-transitionEasing-out);
+    --custom-option-transition: var(--global-transitionDuration-alpha) var(--global-transitionEasing-out);
     display: flex;
     align-items: center;
 }
@@ -913,7 +913,7 @@ more padding on the right to avoid overlap
     margin-right: 8px;
     background: var(--custom-option-background);
     border: 1px solid var(--custom-option-borderColor);
-    transition: var(--custom-option-transition);
+    transition: all var(--custom-option-transition);
     box-shadow: var(--custom-option-boxShadow, 0);
 }
 
@@ -929,7 +929,7 @@ more padding on the right to avoid overlap
     display: block;
     opacity: 0; /* Hide the symbol initially */
     transform: scale(.5);
-    transition: all var(--custom-option-transition);
+    transition: transform var(--custom-option-transition), opacity var(--custom-option-transition);
 }
 
 .c-custom-option__fake-input--checkbox .c-custom-option__symbol {
